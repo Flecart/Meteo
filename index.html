@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Meteo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/forecast.css">
+    <link rel="stylesheet" href="css/input.css">
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="page">
+
+    <!-- <header>
+
+      <h1>Meteo</h1>
+
+    </header> -->
+    <article class="">
+      <div class="scritta hidden">
+        <div class="citazione">
+
+        </div>
+        <div class="autore">
+
+        </div>
+      </div>
+      <!-- ricorda che devi riaggiugnere gli hidden e scheda tempo normale -->
+      <div class="sd_tp_tsf2 scheda_tempo_tsf scheda_tempo">
+        <div class="frcast_container hidden">
+          <div class="city">
+
+          </div>
+          <div class="forecast">
+            <div class="weather">
+
+            </div>
+            <div class="temp">
+            </div>
+          </div>
+          <div class="temperatura_box">
+            <div class="nome_temp">
+              Temperatura massima:
+            </div>
+            <div class="temp_max">
+            </div>
+          </div>
+          <div class="temperatura_box">
+            <div class="nome_temp">
+              Temperatura minima:
+            </div>
+            <div class="temp_min">
+            </div>
+          </div>
+
+
+          <div class="temperatura_box">
+            <div class="nome_temp">
+              Temperatura effettiva:
+            </div>
+            <div class="temp_felt">
+              <!-- qui ci va il risultato  -->
+            </div>
+          </div>
+
+          <div class="umidity_box">
+            <div class="nome_umidity">
+              Umidità:
+            </div>
+            <div class="umidity">
+
+            </div>
+          </div>
+
+          <div class="vento_box">
+            <div class="nome_vento">
+              Velocità del vento:
+            </div>
+            <div class="vento">
+
+            </div>
+          </div>
+          <button class="frc_back">Back</button>
+        </div>
+
+      </div>
+
+      <div class="background_img">
+        <div class="autumn autumn_trsf autumn_trsf2">
+          Autunno
+
+        </div>
+        <button id="back_autumn" class="hidden">Back</button>
+        <div class="winter winter_trsf winter_trsf2">
+          Inverno
+
+        </div>
+        <button id="back_winter" class="hidden">Back</button>
+        <div class="summer summer_trsf ">
+          Estate
+        </div>
+        <button id="back_summer" class="hidden">Back</button>
+
+        <div class="spring spring_trsf">
+          Primavera
+        </div>
+        <button id="back_spring" class="hidden">Back</button>
+
+
+      </div>
+
+      <!-- immagine che appare dopo il caricamento, intelligente -->
+      <div class="bckImg2 hidden"></div>
+
+      <div class="input_zone" id="input_zone">
+
+        <input placeholder="Es.Roma" id="nm_city" class="nm_city">
+        <button class="button"><img src="search.png" alt=""></button>
+        <button class="gps"><img src="gps1.png"></button>
+        <img src="./Imm_lavorate/Wellther.png" alt="logo" id="logo">
+      </div>
+
+
+    </article>
+    <div class="errorWindow" hidden>
+      <div class="error error_trf error_trf2">
+        <div class="erTitolo">
+          <img src="Imm_lavorate/tenor.gif" alt="">
+        </div>
+        <div class="erScritta">
+          Quale città? Potresti riprovare?
+        </div>
+
+        <button class="erButton">OK</button>
+      </div>
+    </div>
+
+
+    <div class="centratoreDiSpinner hidden">
+      <div class="spinner"><img src="Imm_lavorate/loaderi.png"></div>
+    </div>
+
+
+  </body>
+  <script src="meteoscript.js" charset="utf-8"></script>
+</html>
+<!--
+<button class="autumn">autunno</button>
+<button class="winter">inverno</button>
+<button class="spring">primavera</button>
+<button class="summer">estate</button>
+
+<div class="autumn">
+  autunnp
+</div>
+
+
+
+<div class="winter autumn_notbn">
+  Inverno
+</div>
+<div class="summer autumn_notbn">
+  estate
+</div>
+<div class="spring autumn_notbn">
+  primavera
+</div> -->

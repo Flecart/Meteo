@@ -1,0 +1,393 @@
+@font-face {
+  font-family: 'calligraffiti';
+  src: url('Calligraffiti-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* cose sul background */
+.background_img {
+  display: flex;
+  width: 100%;
+  height: 100vh ;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+.autumn_trsf, .autumn_trsf2 {
+  background:url(../Imm_lavorate/stagioni/wooden.png) center center no-repeat;
+  position: absolute;
+}
+.winter_trsf, .winter_trsf2{
+  background:url(../Imm_lavorate/stagioni/Neve.png) center center no-repeat;
+  position: absolute;
+  left: 50%;
+}
+
+.spring_trsf, .spring_trsf2 {
+  background:url(../Imm_lavorate/stagioni/tempest.png) center center no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.summer_trsf, .summer_trsf2 {
+  background:url(../Imm_lavorate/stagioni/Sun_beach.png) center center no-repeat;
+  position: absolute;
+  top:  50%;
+}
+.autumn, .autumn_trsf, .autumn_trsf2,
+.winter, .winter_trsf, .winter_trsf2,
+.spring, .spring_trsf, .spring_trsf2,
+.summer, .summer_trsf, .summer_trsf2 {
+  width: 50%;
+  height: 50%;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  font-size: 50px;
+  color: #FFF;
+  border-radius: 10px;
+  font-family: 'calligraffiti', sans-serif;
+}
+.autumn_trsf2 {
+  /* codice per animazione CLICK */
+  width:50%;
+  height: 50%;
+  box-shadow: none;
+  z-index: 4;
+/* fine codice per animazione CLICK */
+
+  background:url(../Imm_lavorate/stagioni/wooden.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: all 1s;
+  transform: scale(1, 1);
+}
+.winter_trsf2 {
+  /* codice per animazione CLICK */
+  width:50%;
+  height: 50%;
+
+
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 4;
+/* fine codice per animazione CLICK */
+  background:url(../Imm_lavorate/stagioni/Neve.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: all 1s;
+transform-origin: top right;
+  transform: scale(1, 1);
+
+
+}
+.spring_trsf2 {
+  /* codice per animazione CLICK */
+  width:50%;
+  height: 50%;
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 4;
+/* fine codice per animazione CLICK */
+  background:url(../Imm_lavorate/stagioni/tempest.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: all 1s;
+  transform: scale(1, 1);
+  transform-origin: bottom right;
+
+}
+
+.summer_trsf2 {
+  /* codice per animazione CLICK */
+  width:50%;
+  height: 50%;
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 4;
+/* fine codice per animazione CLICK */
+  background:url(../Imm_lavorate/stagioni/Sun_beach.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: all 1s;
+  transform: scale(1, 1);
+  transform-origin: bottom right;
+
+}
+.spring, .summer {
+  justify-content: flex-start;
+}
+/* .winter_trsf,
+, .spring_trsf, .summer_trsf , */
+.autumn_trsf {
+  z-index: 51;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 10px 2px #333333;
+  transition: all 1s;
+  transform-origin: top left;
+  transform: scale(2, 2);
+}
+.winter_trsf {
+  z-index: 51;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 10px 2px #333333;
+  transition: all 1s;
+  transform-origin: top right;
+  transform: scale(2, 2);
+}
+.spring_trsf {
+  z-index: 51;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 10px 2px #333333;
+  transition: all 1s;
+  transform-origin: bottom right;
+  transform: scale(2, 2);
+}
+.summer_trsf {
+  z-index: 51;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 10px 2px #333333;
+  transition: all 1s;
+  transform-origin: bottom left;
+  transform: scale(2, 2);
+}
+
+
+/* CODICE PER ANIMAZIONE BASE BACKGROUND */
+.autumn {
+  /* codice per animazione CLICK */
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 4;
+
+/* fine codice per animazione CLICK */
+
+  background:url(../Imm_lavorate/stagioni/wooden_bn.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: background-size 0.6s;
+  transition: background 0.6s;
+}
+.autumn:hover{
+  background:url(../Imm_lavorate/stagioni/wooden.png) center center no-repeat;
+ background-size: 120% 120%;;
+ box-shadow: 5px 5px 10px 2px #333333;
+ z-index: 5;
+
+}
+.winter {
+  /* codice per animazione CLICK */
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 4;
+/* fine codice per animazione CLICK */
+  background:url(../Imm_lavorate/stagioni/Neve_bn.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: background-size 0.6s;
+  transition: background 0.6s;
+
+}
+.winter:hover{
+  background:url(../Imm_lavorate/stagioni/Neve.png) center center no-repeat;
+  background-size: 120% 120%;
+    box-shadow: -5px 5px 10px 2px #333333;
+  z-index: 5;
+
+}
+.spring {
+  /* codice per animazione CLICK */
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 4;
+/* fine codice per animazione CLICK */
+  background:url(../Imm_lavorate/stagioni/tempest_bn.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: background-size 0.6s;
+  transition: background 0.6s;
+}
+.spring:hover{
+  background:url(../Imm_lavorate/stagioni/tempest.png) center center no-repeat;
+ background-size: 120% 120%;
+ box-shadow: -5px -5px 10px 2px #333333;
+z-index: 5;
+
+}
+.summer {
+  /* codice per animazione CLICK */
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 4;
+/* fine codice per animazione CLICK */
+  background:url(../Imm_lavorate/stagioni/Sun_beach_bn.png) center center no-repeat;
+  background-size: 100% 100%;
+  transition: background-size 0.6s;
+  transition: background 0.6s;
+}
+.summer:hover{
+  background:url(../Imm_lavorate/stagioni/Sun_beach.png) center center no-repeat;
+  background-size: 120% 120%;
+  box-shadow: 5px -5px 10px 2px #333333;
+  z-index: 5;
+}
+
+
+/* FINE EFFETTI BACKGROUND BASE */
+
+/* spazzatura */
+/* .autumn_text,
+.winter_text,
+.summer_text,
+.spring_text{
+  font-size: 50px;
+  color: #FFF;
+}
+.spring_text, .summer_text{
+  justify-content: flex-start;
+}
+transition: background-size 0.6s;
+transition: background 0.6s;
+transition: background-position: 0.6s;
+background-size: 120% 120%;
+background-position: 20% 20%;
+*/
+
+/* cose che vengono cambiate da JS */
+.centratoreDiSpinner {
+  top:0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  font-size: 10em;
+}
+.spinner > img {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+
+}
+
+.hidden, #hidden {
+  display: none;
+}
+#back_spring, #back_autumn,
+#back_summer, #back_winter{
+  z-index: 51;
+  position: absolute;
+  width: 10%;
+  height: 10vh;
+  background: rgba(32, 32, 32, 0.5);
+  top: 90%;
+  left: 90%;
+  cursor: pointer;
+  font-size: 2em;
+  color: #FDFAEF;
+  outline: none;
+}
+
+/* CODICE PER IL BACKGROUND */
+.scritta {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+  width: 90%;
+  height: 90vh;
+  z-index: 101;
+
+  font-size: 35px;
+  letter-spacing: normal;
+  /* color: rgba(218, 165, 32); */
+  /* colore oro  e sotto bianco sporco*/
+  color: #FDFAEF;
+font-family: 'calligraffiti', sans-serif;
+  /* background-color: rgba(255, 254, 239, 0.5); */
+
+}
+.citazione {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+.autore {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  left: 50%;
+  width: 50%;
+  height: 30%;
+}
+
+/* CODICE PER FINESTRINA ERRORI */
+.errorWindow {
+  z-index: 100;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.3);
+  transition: all 1s;
+}
+.error_trf2 {
+  z-index: 100;
+  width: 500px;
+  height: 245px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF;
+  font-size: 2em;
+  border-radius: 20px;
+  border: 1px solid rgba(218, 165, 32);
+  transition: all 1s;
+  opacity: 0;
+}
+.error {
+  transition: all 1s;
+  transform: scale(1,1);
+  opacity: 1;
+}
+
+.error_trf {
+  opacity: 0;
+  transform: scale(0.1,0.1);
+}
+.erTitolo {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.erTitolo img {
+  margin-top: 10px;
+  border: 1px solid rgba(218, 165, 32);
+}
+.erScritta {
+  display: flex;
+  justify-content: center;
+}
+.erButton {
+  width: 51px;
+  height: 50px;
+  position: relative;
+  top: 90%;
+  left: 90%;
+  background: rgba(218, 165, 32);
+  color: #FFF;
+  outline: none;
+}
+.erButton:hover {
+  background: rgba(238, 185, 52);
+  color: #FFF;
+}

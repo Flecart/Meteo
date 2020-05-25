@@ -1,0 +1,130 @@
+/* DISPLAY DEL TEMPO */
+@font-face {
+  font-family: 'roboto';
+  src: url('Roboto-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+.sd_tp_tsf2{
+  z-index: 51;
+  position: absolute;
+  width: 0%;
+  height: 100vh;
+  background-color: #FFFDD0;
+
+  display: flex;
+  flex-direction: column;
+  transition: width 1s;
+  border-radius: 15px;
+  box-shadow: 5px  10px 10px #333333;
+  font-family: 'roboto', sans-serif;
+}
+.scheda_tempo_tsf {
+  width: 25%;
+  transition: width 1s;
+}
+.scheda_tempo {
+  width: 0px;
+}
+.frc_back{
+  width: 100px;
+  height: 7vh;
+  font-size: 3vh;
+  position: relative;
+  background-color: rgba(218, 165, 32);
+  float: right;
+  bottom: -7vh;
+}
+.frc_back:hover {
+  background-color: rgba(238, 195, 62);
+}
+
+.city{
+  height: 15vh;
+
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+.weather, .nome_temp,
+.nome_vento, .nome_umidity   {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+.temp, .temp_felt,
+.temp_max, .temp_min,
+.umidity, .vento{
+  display: flex;
+  justify-content: flex-start;
+  width: 20%;
+  margin-left: 10%;
+}
+/* img {
+  width: 200px;
+  height: 200px;
+} */
+.temperatura_box, .umidity_box,
+.vento_box, .forecast {
+  height: 7vh;
+  font-size: 20px;
+  margin-top: 4.5vh;
+
+  display: flex;
+
+}
+
+/* così uno non lo può buggare, facendo comparrire la scritta della stagione,
+ schiacciando una stagione prima che finisca il caricamento. */
+.bckImg2 {
+  z-index: 50;
+  /* giusto sotto imput */
+  position: absolute;
+  left: 24%;
+  width: 76%;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+@media only screen and (max-device-width:425px){
+  .city {
+    justify-content: center;
+    font-size: 60px;
+  }
+  .sd_tp_tsf2{
+    margin-top: 50vh;
+    height: 50vh;
+  }
+  .scheda_tempo_tsf {
+    width: 100%;
+    transition: width 1s;
+  }
+  .scheda_tempo {
+    width: 0px;
+  }
+  .bckImg2 {
+    width: 100%;
+    height: 50vh;
+    left: 0;
+  }
+  .temperatura_box, .umidity_box,
+  .vento_box, .forecast {
+    height: 4vh;
+    font-size: 40px;
+    margin-top: 0.5vh;
+    display: flex;
+  }
+  .weather, .nome_temp,
+  .nome_vento, .nome_umidity   {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .frc_back {
+    bottom: 0;
+    width: 150px;
+  }
+}
